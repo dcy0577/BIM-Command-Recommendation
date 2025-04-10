@@ -1,4 +1,4 @@
 [submodule "peft"]
 	path = peft
 	url = https://github.com/dcy0577/peft
-	branch = t4rec_peft
+	branch = tr4rec_peft
