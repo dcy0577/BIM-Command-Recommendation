@@ -1,0 +1,274 @@
+{
+  "feature": [
+    {
+      "name": "timestamp/age_days/LogOp/Normalize/list",
+      "valueCount": {
+        "min": "2",
+        "max": "185"
+      },
+      "type": "FLOAT",
+      "floatDomain": {
+        "name": "timestamp/age_days/LogOp/Normalize/list",
+        "min": -2.917729139328003,
+        "max": 1.5231701135635376
+      },
+      "annotation": {
+        "tag": [
+          "continuous",
+          "list"
+        ]
+      }
+    },
+    {
+      "name": "timestamp/hour/list",
+      "valueCount": {
+        "min": "2",
+        "max": "185"
+      },
+      "type": "FLOAT",
+      "floatDomain": {
+        "name": "timestamp/hour/list",
+        "min": 5.7866054703481495e-06,
+        "max": 1.605135440826416
+      },
+      "annotation": {
+        "tag": [
+          "continuous",
+          "time",
+          "list"
+        ]
+      }
+    },
+    {
+      "name": "timestamp/weekday/list",
+      "valueCount": {
+        "min": "2",
+        "max": "185"
+      },
+      "type": "FLOAT",
+      "floatDomain": {
+        "name": "timestamp/weekday/list",
+        "min": 0.00013345430488698184,
+        "max": 1.568290114402771
+      },
+      "annotation": {
+        "tag": [
+          "continuous",
+          "time",
+          "list"
+        ]
+      }
+    },
+    {
+      "name": "timestamp/day/list",
+      "valueCount": {
+        "min": "2",
+        "max": "185"
+      },
+      "type": "FLOAT",
+      "floatDomain": {
+        "name": "timestamp/day/list",
+        "min": 0.055881768465042114,
+        "max": 1.7342302799224854
+      },
+      "annotation": {
+        "tag": [
+          "continuous",
+          "time",
+          "list"
+        ]
+      }
+    },
+    {
+      "name": "timestamp/month/list",
+      "valueCount": {
+        "min": "2",
+        "max": "185"
+      },
+      "type": "FLOAT",
+      "floatDomain": {
+        "name": "timestamp/month/list",
+        "min": 0.5930372476577759,
+        "max": 1.3344756364822388
+      },
+      "annotation": {
+        "tag": [
+          "continuous",
+          "time",
+          "list"
+        ]
+      }
+    },
+    {
+      "name": "timestamp/year/list",
+      "valueCount": {
+        "min": "2",
+        "max": "185"
+      },
+      "type": "FLOAT",
+      "floatDomain": {
+        "name": "timestamp/year/list",
+        "min": 0.9999997019767761,
+        "max": 0.9999997019767761
+      },
+      "annotation": {
+        "tag": [
+          "continuous",
+          "time",
+          "list"
+        ]
+      }
+    },
+    {
+      "name": "timestamp/hour/sin/list",
+      "valueCount": {
+        "min": "2",
+        "max": "185"
+      },
+      "type": "FLOAT",
+      "floatDomain": {
+        "name": "timestamp/hour/sin/list",
+        "min": 1.7767292774806265e-06,
+        "max": 0.40796470642089844
+      },
+      "annotation": {
+        "tag": [
+          "continuous",
+          "time",
+          "list"
+        ]
+      }
+    },
+    {
+      "name": "timestamp/hour/cos/list",
+      "valueCount": {
+        "min": "2",
+        "max": "185"
+      },
+      "type": "FLOAT",
+      "floatDomain": {
+        "name": "timestamp/hour/cos/list",
+        "min": 0.9129977226257324,
+        "max": 1.0
+      },
+      "annotation": {
+        "tag": [
+          "continuous",
+          "time",
+          "list"
+        ]
+      }
+    },
+    {
+      "name": "timestamp/weekday/sin/list",
+      "valueCount": {
+        "min": "2",
+        "max": "185"
+      },
+      "type": "FLOAT",
+      "floatDomain": {
+        "name": "timestamp/weekday/sin/list",
+        "min": 0.7421683073043823,
+        "max": 0.9995285272598267
+      },
+      "annotation": {
+        "tag": [
+          "time",
+          "list",
+          "continuous"
+        ]
+      }
+    },
+    {
+      "name": "timestamp/weekday/cos/list",
+      "valueCount": {
+        "min": "2",
+        "max": "185"
+      },
+      "type": "FLOAT",
+      "floatDomain": {
+        "name": "timestamp/weekday/cos/list",
+        "min": -0.6702135801315308,
+        "max": 0.6233955025672913
+      },
+      "annotation": {
+        "tag": [
+          "time",
+          "list",
+          "continuous"
+        ]
+      }
+    },
+    {
+      "name": "item_id/list",
+      "valueCount": {
+        "min": "2",
+        "max": "185"
+      },
+      "type": "INT",
+      "intDomain": {
+        "name": "item_id/list",
+        "min": "1",
+        "max": "51996",
+        "isCategorical": true
+      },
+      "annotation": {
+        "tag": [
+          "item_id",
+          "list",
+          "categorical",
+          "item"
+        ]
+      }
+    },
+    {
+      "name": "category/list",
+      "valueCount": {
+        "min": "2",
+        "max": "185"
+      },
+      "type": "INT",
+      "intDomain": {
+        "name": "category/list",
+        "min": "1",
+        "max": "332",
+        "isCategorical": true
+      },
+      "annotation": {
+        "tag": [
+          "list",
+          "categorical",
+          "item"
+        ]
+      }
+    },
+    {
+      "name": "user_country",
+      "type": "INT",
+      "intDomain": {
+        "name": "session_id",
+        "min": "1",
+        "max": "62",
+        "isCategorical": true
+      },
+      "annotation": {
+        "tag": [
+          "categorical"
+        ]
+      }
+    },
+    {
+      "name": "user_age",
+      "type": "FLOAT",
+      "floatDomain": {
+        "name": "user_age",
+        "max": 0.4079650044441223
+      },
+      "annotation": {
+        "tag": [
+          "continuous"
+        ]
+      }
+    }
+  ]
+}

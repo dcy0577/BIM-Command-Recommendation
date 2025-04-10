@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "PyTorch Distributed Training",
+            "type": "python",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "module": "torch.distributed.run",
+            "justMyCode": false,
+            "args": [
+                "--nproc_per_node=2",  
+                "${file}",
+            ]
+        },
+        {
+            "name": "Python: Accelerate Debug",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",  
+            "console": "integratedTerminal",
+            "args": ["--config_file", "accelerate_config.yaml"], 
+            "env": {
+              "CUDA_VISIBLE_DEVICES": "0" 
+            },
+            "cwd": "${workspaceFolder}",  
+            "justMyCode": false  
+          }
+    ]
+}

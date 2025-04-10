@@ -1,0 +1,87 @@
+name: "1_predictpytorchtriton"
+input {
+  name: "merge_count_norm-list__values"
+  data_type: TYPE_FP64
+  dims: -1
+}
+input {
+  name: "merge_count_norm-list__offsets"
+  data_type: TYPE_INT32
+  dims: -1
+}
+input {
+  name: "timestamp_interval_norm_global-list__values"
+  data_type: TYPE_FP64
+  dims: -1
+}
+input {
+  name: "timestamp_interval_norm_global-list__offsets"
+  data_type: TYPE_INT32
+  dims: -1
+}
+input {
+  name: "item_id-list__values"
+  data_type: TYPE_INT64
+  dims: -1
+}
+input {
+  name: "item_id-list__offsets"
+  data_type: TYPE_INT32
+  dims: -1
+}
+input {
+  name: "classification-list__values"
+  data_type: TYPE_INT64
+  dims: -1
+}
+input {
+  name: "classification-list__offsets"
+  data_type: TYPE_INT32
+  dims: -1
+}
+input {
+  name: "target-list__values"
+  data_type: TYPE_INT64
+  dims: -1
+}
+input {
+  name: "target-list__offsets"
+  data_type: TYPE_INT32
+  dims: -1
+}
+input {
+  name: "pretrained_item_id_embeddings__values"
+  data_type: TYPE_FP64
+  dims: -1
+  dims: 3072 # depends on text embedding dims or 1024
+}
+input {
+  name: "pretrained_item_id_embeddings__offsets"
+  data_type: TYPE_INT32
+  dims: -1
+}
+output {
+  name: "item_id_scores"
+  data_type: TYPE_FP32
+  dims: -1
+  dims: 4942
+}
+output {
+  name: "item_ids"
+  data_type: TYPE_INT64
+  dims: -1
+  dims: 4942
+}
+instance_group {
+}
+parameters {
+  key: "INFERENCE_MODE"
+  value {
+    string_value: "true"
+  }
+}
+parameters: {
+  key: "EXECUTION_ENV_PATH",
+  value: {string_value: "/t4rec_23.06.tar.gz"}
+}
+backend: "python"

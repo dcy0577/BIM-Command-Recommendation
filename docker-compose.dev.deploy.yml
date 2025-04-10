@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  tritonserver:
+    image: nvcr.io/nvidia/tritonserver:23.08-py3
+    command: tritonserver --model-repository=/models
+    environment:
+      TRITONSERVER_LOG_VERBOSE: "2"
+      PYTHONPATH: "/:$PYTHONPATH"
+    shm_size: 5G
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+      - "8002:8002"
+    volumes:
+      - ./ens_models_mixtral:/models # the ensemble model folder
+      - ./t4rec_23.06_new_transformers.tar.gz:/t4rec_23.06.tar.gz # packed conda env
+      - ./transformers4rec:/transformers4rec # make sure to use our customized transformers4rec
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            count: all
+            capabilities: [gpu]
+
+
+
